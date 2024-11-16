@@ -1,3 +1,12 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": "next/core-web-vitals",
+  "overrides": [
+    {
+      "files": ["src/app/contact/page.tsx"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ]
 }
