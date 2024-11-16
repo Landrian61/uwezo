@@ -1,8 +1,16 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google"; // Import Nunito from next/font/google
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/navigation/header"; // Import Header
+import Header from "@/components/navigation/header";
+import Footer from "@/components/navigation/footer";
+
+// Load Nunito font
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "700"] // Adjust weights as needed
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,10 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${nunito.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header /> {/* Added Header component */}
         {children}
+        <Footer /> {/* Added Footer component */}
       </body>
     </html>
   );
