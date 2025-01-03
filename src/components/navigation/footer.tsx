@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white/80 backdrop-blur-md shadow-sm mt-auto">
+    <footer className="bg-white/80 backdrop-blur-md shadow-sm mt-auto dark:bg-black">
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Description */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be] to-[#80cccc]">
+            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-[#34476c] dark:text-gold">
               UWEZO
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm dark:text-white">
               We are a friendly team of developers who work together to ensure
               that you receive the best support you require.
             </p>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
           {/* Emergency Contact */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#2596be]">
+            <h3 className="text-lg font-semibold text-[#34476c] dark:text-gold">
               Emergency Contact
             </h3>
             <div className="space-y-2">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 (phone) => (
                   <p
                     key={phone}
-                    className="text-gray-600 text-sm flex items-center"
+                    className="text-gray-600 dark:text-gray-400 text-sm flex items-center"
                   >
                     <svg
                       className="w-4 h-4 mr-2"
@@ -51,19 +51,19 @@ const Footer: React.FC = () => {
 
           {/* Important Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#2596be]">
+            <h3 className="text-lg font-semibold text-[#34476c] dark:text-gold">
               Important Links
             </h3>
             <div className="space-y-2">
               {[
                 { label: "About", href: "/about" },
-                { label: "Projects", href: "/projects" },
+                { label: "Products", href: "/products" },
                 { label: "Contact Us", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="block text-gray-600 hover:text-[#2596be] transition-colors text-sm"
+                  className="block text-gray-600 hover:text-[#3C4F76] dark:hover:text-gold dark:text-gray-400 transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-200 mt-8 pt-4">
-          <p className="text-center text-gray-600 text-sm">
+          <p className="text-center text-gray-600 text-sm dark:text-white">
             Copyright © {new Date().getFullYear()} Uwezo. All rights reserved.
           </p>
         </div>

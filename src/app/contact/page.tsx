@@ -46,13 +46,13 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactInfo = ({ icon: Icon, title, content }: any) => (
-  <div className="flex items-center space-x-4 p-4 bg-white rounded-lg hover:shadow-md transition-all duration-300">
-    <div className="bg-gradient-to-r from-[#2596be] to-[#80cccc] p-3 rounded-full">
+  <div className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg hover:shadow-md transition-all duration-300">
+    <div className="bg-gradient-to-r from-[#3C4F76] to-[#0077B6] dark:from-gold dark:to-orange p-3 rounded-full">
       <Icon className="w-6 h-6 text-white" />
     </div>
     <div>
-      <h3 className="font-semibold text-gray-800">{title}</h3>
-      <p className="text-gray-600">{content}</p>
+      <h3 className="font-semibold text-gray-800 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{content}</p>
     </div>
   </div>
 );
@@ -82,7 +82,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 to-white pt-16">
+    <main className="relative min-h-screen overflow-hidden bg-white dark:bg-black pt-16">
       <div
         className={`relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-12 transition-all duration-1000 ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -90,13 +90,13 @@ export default function ContactPage() {
       >
         {/* Header Section */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 mb-6">
             Get in{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2596be] to-[#80cccc]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3C4F76] to-[#0077B6] dark:from-gold dark:to-orange">
               Touch
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Have questions or want to discuss a project? We'd love to hear from
             you. Send us a message and we'll respond as soon as possible.
           </p>
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="animate-fade-in-delayed hover:shadow-xl transition-all duration-500">
+          <Card className="animate-fade-in-delayed hover:shadow-xl transition-all duration-500 dark:bg-gray-800 dark:border-gray-600">
             <CardContent className="p-6">
               <Form {...form}>
                 <form
@@ -116,15 +116,17 @@ export default function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-700">Name</FormLabel>
+                        <FormLabel className="text-gray-700 dark:text-white">
+                          Name
+                        </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Your Name"
                             {...field}
-                            className="w-full border-gray-200 focus:border-[#2596be] focus:ring-[#2596be]"
+                            className="w-full border-gray-200 bg-[#2596be]/10 dark:bg-black dark:border-gray-600 focus:border-[#3C4F76] focus:ring-[#0077B6] dark:focus:border-gold dark:focus:ring-offset-gold"
                           />
                         </FormControl>
-                        <FormDescription className="text-gray-500">
+                        <FormDescription className="text-gray-500 dark:text-gray-300">
                           Please enter your full name.
                         </FormDescription>
                         <FormMessage className="text-red-500" />
@@ -136,16 +138,18 @@ export default function ContactPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-700">Email</FormLabel>
+                        <FormLabel className="text-gray-700 dark:text-white">
+                          Email
+                        </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Your Email"
                             type="email"
                             {...field}
-                            className="w-full border-gray-200 focus:border-[#2596be] focus:ring-[#2596be]"
+                            className="w-full border-gray-200 bg-[#2596be]/10 dark:bg-black dark:border-gray-600 focus:border-[#3C4F76] focus:ring-[#0077B6] dark:focus:border-gold dark:focus:ring-offset-gold"
                           />
                         </FormControl>
-                        <FormDescription className="text-gray-500">
+                        <FormDescription className="text-gray-500 dark:text-gray-300">
                           We'll never share your email.
                         </FormDescription>
                         <FormMessage className="text-red-500" />
@@ -157,16 +161,18 @@ export default function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-700">Message</FormLabel>
+                        <FormLabel className="text-gray-700 dark:text-white">
+                          Message
+                        </FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Your Message"
                             {...field}
-                            className="w-full border-gray-200 focus:border-[#2596be] focus:ring-[#2596be]"
+                            className="w-full border-gray-200 bg-[#2596be]/10 dark:bg-black dark:border-gray-600 focus:border-[#3C4F76] focus:ring-[#0077B6] dark:focus:border-gold dark:focus:ring-offset-gold"
                             rows={4}
                           />
                         </FormControl>
-                        <FormDescription className="text-gray-500">
+                        <FormDescription className="text-gray-50 dark:text-gray-300">
                           Describe your inquiry in detail.
                         </FormDescription>
                         <FormMessage className="text-red-500" />
@@ -175,7 +181,7 @@ export default function ContactPage() {
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#2596be] to-[#80cccc] hover:opacity-90 transition-opacity"
+                    className="w-full text-white dark:text-white bg-gradient-to-r from-[#3C4F76] to-[#0077B6] dark:from-gold dark:to-orange hover:opacity-90 transition-opacity"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
