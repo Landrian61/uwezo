@@ -170,12 +170,6 @@ export default function AboutPage() {
       </section>
 
       <WaveSVG />
-
-      {/* Floating Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-[10%] w-16 h-16 bg-azure/10 dark:bg-gold/10 rounded-full animate-float-slow" />
-        <div className="absolute top-40 right-[15%] w-20 h-20 bg-turquoise/10 dark:bg-orange/10 rounded-full animate-float-slower" />
-      </div>
     </main>
   );
 }
