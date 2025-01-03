@@ -203,7 +203,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
       <section className="relative z-10 max-w-3xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-8">
@@ -222,13 +221,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact CTA Section */}
       <section className="relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl font-bold mb-6">
           Ready to Transform Your Business?
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-8">
-          Let's discuss how we can help you achieve your technology goals
+          Let&apos;s discuss how we can help you achieve your technology goals
         </p>
         <div className="flex justify-center gap-4">
           <Button className="bg-[#3C4F76] hover:bg-[#0077B6] dark:bg-gold dark:hover:bg-gold/90 text-white">

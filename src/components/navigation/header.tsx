@@ -12,6 +12,7 @@ import {
   X,
   ChevronRight
 } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -95,12 +96,13 @@ const Header = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4">
           {/* Logo */}
           <Link href="/">
-            <img
+            <Image
               src="/logo/logo1.svg"
               alt="Company Logo"
               width={200}
               height={150}
               className="w-auto h-12 dark:filter dark:brightness-200 dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+              priority
             />
           </Link>
 
