@@ -234,18 +234,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-
       <WaveSVG />
-
-      {/* Floating Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-[10%] w-16 h-16 bg-[#49c4c242] dark:bg-gold/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-40 right-[15%] w-20 h-20 bg-[#49c4c242] dark:bg-orange/10 rounded-full animate-float-slower"></div>
-        <div className="absolute top-60 left-[30%] w-12 h-12 bg-[#49c4c242] dark:bg-gold/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-80 right-[25%] w-24 h-24 bg-[#49c4c242] dark:bg-orange/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-96 left-[50%] w-10 h-10 bg-[#49c4c242] dark:bg-gold/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-112 right-[35%] w-18 h-18 bg-[#49c4c242] dark:bg-orange/10 rounded-full animate-float-slow"></div>
-      </div>
     </main>
   );
 }
